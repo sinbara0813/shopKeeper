@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <SurfaceView
+        android:id="@+id/preview_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <google.zxing.client.view.ViewfinderView
+        android:id="@+id/viewfinder_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:background="@color/color_black50"
+        android:paddingRight="16dp"
+        >
+        <ImageView
+            android:src="@mipmap/icon_nav_back_white"
+            android:id="@+id/iv_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            />
+        <TextView
+            android:visibility="gone"
+            android:text="核销记录"
+            android:layout_alignParentRight="true"
+            android:id="@+id/tv_write_off_record"
+            android:textSize="14sp"
+            android:textColor="@color/color_white"
+            android:gravity="right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:background="@color/color_black50"
+        android:layout_marginBottom="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:textSize="12sp"
+            android:textColor="@color/normal_black"
+            android:layout_marginLeft="16dp"
+            android:text="手动输入"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <EditText
+            android:id="@+id/et_code"
+            android:gravity="center_vertical"
+            android:hint="请输入"
+            android:lines="1"
+            android:textColorHint="@color/normal_black"
+            android:textColor="@color/normal_black"
+            android:layout_marginLeft="10dp"
+            android:textSize="14sp"
+            android:background="@null"
+            android:layout_height="44dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

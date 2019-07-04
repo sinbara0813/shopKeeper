@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="54dp"
+        android:orientation="horizontal"
+        />
+
+    <View
+        android:id="@+id/select_bg"
+        android:layout_width="297dp"
+        android:layout_height="34dp"
+        android:background="@drawable/sp_select_bg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/guide_line"/>
+
+    <EditText
+        android:id="@+id/search_et"
+        android:layout_width="280dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@+id/select_bg"
+        app:layout_constraintBottom_toBottomOf="@+id/select_bg"
+        app:layout_constraintLeft_toLeftOf="@+id/select_bg"
+        android:layout_marginLeft="10dp"
+        android:textSize="12dp"
+        android:drawableLeft="@mipmap/yuncang_home_sousuo"
+        android:drawablePadding="3dp"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:imeOptions="actionSearch"
+        android:background="@null"
+        />
+
+    <TextView
+        android:id="@+id/search_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/guide_line"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="取消"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#f1f3f8"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guide_line"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/content_ll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guide_line"
+        android:layout_marginTop="10dp"
+        android:background="@color/color_white"/>
+    
+    <TextView
+        android:id="@+id/clear_tv"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/content_ll"
+        android:gravity="center"
+        android:textSize="14dp"
+        android:text="清除搜索记录"
+        android:visibility="gone"
+        android:background="@color/color_white"
+        android:textColor="@color/color_black4"/>
+
+</android.support.constraint.ConstraintLayout>

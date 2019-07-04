@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_shadow_bottom16_title"/>
+
+    <com.d2cmall.shopkeeper.ui.view.OverScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-16dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"/>
+
+    </com.d2cmall.shopkeeper.ui.view.OverScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+        <TextView
+            android:id="@+id/edit_tv"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="56dp"
+            android:text="编辑"
+            android:gravity="center"
+            android:textColor="#4050d2"/>
+
+        <TextView
+            android:id="@+id/sold_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:text="下架"
+            android:gravity="center"
+            android:textColor="#4050d2"/>
+
+        <TextView
+            android:id="@+id/share_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:text="分享"
+            android:gravity="center"
+            android:textColor="#4050d2"/>
+
+        <TextView
+            android:id="@+id/delete_tv"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="56dp"
+            android:text="删除"
+            android:gravity="center"
+            android:textColor="#e83333"/>
+
+    </LinearLayout>
+
+</LinearLayout>

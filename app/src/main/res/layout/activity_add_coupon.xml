@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_shadow_bottom16_title" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:layout_marginTop="-16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="优惠券名称"
+                android:textColor="#22242a"
+                android:textSize="@dimen/medium_text_size3" />
+
+            <EditText
+                android:id="@+id/promotion_name_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="right"
+                android:hint="请输入"
+                android:lines="1"
+                android:paddingLeft="10dp"
+                android:textColor="#c2c5cf"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f1f3f8" />
+
+        <LinearLayout
+            android:id="@+id/ll_receive_start_date"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="领取开始时间"
+                android:textColor="#22242a"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/tv_receive_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:drawableRight="@mipmap/icon_details"
+                android:gravity="right|center_vertical"
+                android:paddingLeft="10dp"
+                android:text="请设置"
+                android:textColor="#c2c5cf"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f1f3f8" />
+
+        <LinearLayout
+            android:id="@+id/ll_receive_end_date"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="领取结束时间"
+                android:textColor="#22242a"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/tv_receive_end_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:drawableRight="@mipmap/icon_details"
+                android:gravity="right|center_vertical"
+                android:paddingLeft="10dp"
+                android:text="请设置"
+                android:textColor="#c2c5cf"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#f6f7fa" />
+
+        <LinearLayout
+            android:id="@+id/ll_time_type"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="使用有效期"
+                android:textColor="#22242a"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/tv_time_type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:drawableRight="@mipmap/icon_details"
+                android:gravity="right|center_vertical"
+                android:paddingLeft="10dp"
+                android:text="固定日期范围"
+                android:textColor="#c2c5cf"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f1f3f8" />
+
+        <LinearLayout
+            android:id="@+id/ll_sustain"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="有效时长"
+                android:textColor="#22242a"
+                android:textSize="@dimen/medium_text_size3" />
+
+            <EditText
+                android:id="@+id/et_sustain"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="right"
+                android:hint="请输入"
+                android:inputType="number"
+                android:textColor="@color/normal_black"
+                android:textSize="@dimen/medium_text_size3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="(小时)"
+                android:textColor="@color/normal_black"
+                android:textSize="@dimen/medium_text_size3" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f1f3f8" />
+
+        <LinearLayout
+            android:id="@+id/ll_use_start_date"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:text="使用开始时间"
+                android:textColor="#22242a"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/tv_use_start_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:drawableRight="@mipmap/icon_details"
+                android:gravity="center_vertical"
+                android:text="请设置"
+                android:textColor="#c2c5cf"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f1f3f8" />
+
+        <LinearLayout
+
+            android:id="@+id/ll_use_end_date"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:text="使用结束时间"
+                android:textColor="#22242a"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/tv_use_end_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:drawableRight="@mipmap/icon_details"
+                android:gravity="center_vertical"
+                android:text="请设置"
+                android:textColor="#c2c5cf"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#f6f7fa" />
+
+        <LinearLayout
+            android:id="@+id/ll_discount_setting"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:text="优惠设置"
+                android:textColor="#22242a"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/tv_coupon_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:drawableRight="@mipmap/icon_details"
+                android:gravity="center_vertical"
+                android:text="请设置"
+                android:textColor="#c2c5cf"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f1f3f8" />
+
+        <LinearLayout
+            android:id="@+id/ll_product_scope"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:text="商品范围"
+                android:textColor="#22242a"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/tv_scope"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:drawableRight="@mipmap/icon_details"
+                android:gravity="center_vertical"
+                android:text="请设置"
+                android:textColor="#c2c5cf"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#f1f3f8" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="是否上架"
+                android:textColor="#22242A"
+                android:textSize="14sp" />
+
+            <Switch
+                android:checked="true"
+                android:id="@+id/switch_view"
+                android:layout_width="44dp"
+                android:layout_height="27dp"
+                android:textOff=""
+                android:textOn=""
+                android:theme="@style/MySwitch" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

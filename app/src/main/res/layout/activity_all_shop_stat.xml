@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/normal_blue">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:paddingLeft="15dp">
+
+        <ImageView
+            android:id="@+id/back_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_nav_back_white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textColor="@color/color_white"
+            android:text="全部门店"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/time_tv"
+            android:layout_width="122dp"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:textSize="12dp"
+            android:textColor="@color/color_white"
+            android:background="@drawable/sp_stat_bg"
+            android:text="自定义时间"
+            android:paddingLeft="20dp"
+            android:paddingRight="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawablePadding="3dp"
+            android:drawableRight="@mipmap/icon_home_shaixuan"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/first_content_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"/>
+
+    <View
+        android:id="@+id/cursor"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/color_white"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#fff2f8fd"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:textSize="12dp"
+            android:textColor="@color/flash_time_bg_color"
+            android:text="门店"
+            android:paddingLeft="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:textSize="12dp"
+            android:textColor="@color/flash_time_bg_color"
+            android:text="销售额"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:textSize="12dp"
+            android:textColor="@color/flash_time_bg_color"
+            android:text="订单数"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:textSize="12dp"
+            android:textColor="@color/flash_time_bg_color"
+            android:text="商品总数"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:textSize="12dp"
+            android:textColor="@color/flash_time_bg_color"
+            android:text="付款人数"
+            />
+
+    </LinearLayout>
+
+    <com.d2cmall.shopkeeper.ui.view.PtrStoreHouseFrameLayout
+        android:id="@+id/ptr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:ptr_duration_to_close="200"
+        app:ptr_duration_to_close_header="1000"
+        app:ptr_keep_header_when_refresh="true"
+        app:ptr_pull_to_fresh="false"
+        app:ptr_ratio_of_header_height_to_refresh="1.2"
+        app:ptr_resistance="1.7">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_view"
+        android:layout_width="match_parent"
+        android:background="@color/color_white"
+        android:layout_height="match_parent"/>
+    </com.d2cmall.shopkeeper.ui.view.PtrStoreHouseFrameLayout>
+</LinearLayout>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@color/color_white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/layout_shadow_bottom16_title"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/ll_contianer"
+        >
+        <LinearLayout
+            android:layout_marginTop="86dp"
+            android:paddingLeft="40dp"
+            android:layout_below="@+id/rl_title"
+            android:id="@+id/_ll_welcome"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:text="Hello"
+                android:textSize="36sp"
+                android:textColor="#4050D2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:text="欢迎加入趣电铺"
+                android:textSize="32sp"
+                android:textColor="#47494E"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+        <com.d2cmall.shopkeeper.ui.view.ClearEditText
+            android:inputType="numberSigned"
+            android:layout_marginLeft="40dp"
+            android:hint="账号"
+            android:id="@+id/et_account"
+            android:textSize="16sp"
+            android:textColor="#8292A3"
+            android:layout_marginRight="40dp"
+            android:background="@null"
+            android:textColorHint="#C2C5CF"
+            android:layout_marginTop="50dp"
+            android:layout_height="32dp"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/_ll_welcome"
+            />
+        <View
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_below="@+id/et_account"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#F1F3F8" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <EditText
+                android:layout_marginLeft="40dp"
+                android:hint="密码"
+                android:inputType="textPassword"
+                android:id="@+id/et_password"
+                android:textColor="#8292A3"
+                android:textSize="16sp"
+                android:layout_marginRight="60dp"
+                android:background="@null"
+                android:textColorHint="#C2C5CF"
+                android:layout_marginTop="28dp"
+                android:layout_height="32dp"
+                android:layout_width="match_parent"
+                />
+            <ImageView
+                android:layout_marginTop="28dp"
+                android:id="@+id/password_see"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="4dp"
+                android:src="@mipmap/icon_login_eyeclose" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/password_line"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_below="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#F1F3F8" />
+
+        <Button
+            android:layout_marginTop="36dp"
+            android:text="登录"
+            android:gravity="center"
+            android:textColor="@color/color_white"
+            android:textSize="16sp"
+            android:layout_below="@+id/et_password"
+            android:id="@+id/btn_login"
+            android:background="@drawable/sp_round2_bg_cbcbcb"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:id="@+id/tv_register"
+                android:textColor="#4050D2"
+                android:textSize="14sp"
+                android:text="快速注册"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="12dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                />
+            <TextView
+                android:layout_alignParentRight="true"
+                android:id="@+id/tv_forget_password"
+                android:textColor="#8D92A3"
+                android:textSize="14sp"
+                android:text="忘记密码"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="12dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

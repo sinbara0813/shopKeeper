@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="14dp"
+    android:paddingRight="14dp"
+    android:paddingBottom="10dp">
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="72dp"
+        android:layout_height="96dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textSize="13dp"
+        android:textColor="#111111"
+        app:layout_constraintTop_toTopOf="@+id/iv"
+        app:layout_constraintLeft_toRightOf="@+id/iv"
+        android:layout_marginLeft="11dp"
+        />
+
+    <TextView
+        android:id="@+id/price_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#8d92a3"
+        android:textSize="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/name_tv"
+        app:layout_constraintLeft_toRightOf="@+id/iv"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/store_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#8d92a3"
+        android:textSize="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/price_tv"
+        app:layout_constraintLeft_toRightOf="@+id/iv"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/provide_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_black3"
+        android:textSize="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/store_tv"
+        app:layout_constraintLeft_toRightOf="@+id/iv"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="10dp"/>
+
+    <ImageView
+        android:id="@+id/add_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="7dp"
+        android:src="@mipmap/icon_jia_lan"/>
+
+</android.support.constraint.ConstraintLayout>

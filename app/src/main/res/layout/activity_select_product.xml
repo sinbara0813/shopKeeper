@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <com.d2cmall.shopkeeper.ui.view.PtrStoreHouseFrameLayout
+        android:id="@+id/ptr"
+        android:layout_below="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:ptr_duration_to_close="200"
+        app:ptr_duration_to_close_header="1000"
+        app:ptr_keep_header_when_refresh="true"
+        app:ptr_pull_to_fresh="false"
+        app:ptr_ratio_of_header_height_to_refresh="1.2"
+        app:ptr_resistance="1.7">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycle_view"
+            android:layout_marginTop="-16dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.d2cmall.shopkeeper.ui.view.PtrStoreHouseFrameLayout>
+
+    <include layout="@layout/list_empty_view" />
+
+    <include layout="@layout/layout_progressbar" />
+    <include layout="@layout/layout_shadow_bottom16_title"/>
+</RelativeLayout>

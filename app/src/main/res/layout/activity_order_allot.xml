@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg_color">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textSize="15dp"
+        android:textColor="#8d92a3"
+        android:text="确认订单"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/line"
+        android:background="@color/color_white"
+        android:gravity="center"/>
+
+    <ImageView
+        android:id="@+id/back_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/line"
+        android:paddingLeft="14dp"
+        android:scaleType="centerInside"
+        android:src="@mipmap/icon_nav_back_black"/>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/line"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="42dp"/>
+
+    <TextView
+        android:id="@+id/sure_tv"
+        android:layout_width="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="48dp"
+        android:background="@color/normal_blue"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="15dp"
+        android:text="确定"
+        android:textColor="@color/color_white"/>
+
+    <com.d2cmall.shopkeeper.ui.view.OverScrollView
+        android:layout_width="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/line"
+        app:layout_constraintBottom_toTopOf="@+id/sure_tv"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/layout_order_address"/>
+
+            <include layout="@layout/layout_order_product"/>
+
+            <include layout="@layout/layout_order_allot_settle"/>
+
+            <include layout="@layout/layout_order_allot_pay"/>
+
+        </LinearLayout>
+    </com.d2cmall.shopkeeper.ui.view.OverScrollView>
+
+</android.support.constraint.ConstraintLayout>

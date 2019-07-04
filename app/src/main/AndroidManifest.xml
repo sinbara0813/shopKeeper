@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.d2cmall.shopkeeper">
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera.flash" />
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.SENSOR_TYPE_GRAVITY" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:hardwareAccelerated="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:largeHeap="true"
+        android:name=".D2CApplication"
+        android:theme="@style/AppTheme">
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.d2cmall.shopkeeper.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths_public" />
+        </provider>
+
+        <!-- 高德配置 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="e682f24347c1b124a9b531905f1f93b4"/>
+        <!-- 定位需要的服务 -->
+        <service android:name="com.amap.api.location.APSService">
+        </service>
+
+        <!--glide配置-->
+        <meta-data
+            android:name="com.d2cmall.shopkeeper.glide.GlideModule"
+            android:value="GlideModule" />
+        <activity android:name=".ui.activity.OfflineCartActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.CreateAddressActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.AddOfflineAddressActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.OfflineSettleActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.ProductSettleActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.CartActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.OrderPurchaseSettleActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.OrderAllotSettleActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.PayStateActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.ProductManagerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/sofiaTheme"/>
+        <activity android:name=".ui.activity.CustomerManagerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/sofiaTheme"/>
+        <activity android:name=".ui.activity.CustomerDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.OrderManagerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/sofiaTheme"/>
+        <activity android:name=".ui.activity.CreateBrandActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".ui.activity.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.RegisterActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.FundManagerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/sofiaTheme"/>
+        <activity android:name=".ui.activity.ApplayWithdrawActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.TransactionRecordActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.WithdrawRecordActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.WithdrawInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.BrandManagerActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.BrandSettingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".ui.activity.BrandAuthenticationActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.StaffManagerListActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.StaffEditActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.EditPersonInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.MarketingToolsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.OrderDetialActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.CollagePromotionActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.AddCollageProductActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.CollagePromotionSelectProductListActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.SelectProductConfirmActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.AddCollageCouponActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.CollagePromotionSelectCouponActivity"
+        android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.WriteOffActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.WriteOffRecordActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.AddProductActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.CategoryManagerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".ui.activity.CountryCodeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".ui.activity.CouponActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.AddCouponActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.AssignProductActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.ProductDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.ProductListActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.CouponSettingActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.AboutUsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.FeedBackActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.WebActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/sofiaTheme"/>
+        <activity android:name=".ui.activity.CropActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.StockProductManagertActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/sofiaTheme"/>
+        <activity android:name=".ui.activity.ReshipRefundListActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.CustomerAfterSaleListActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.PurchaseAllocationWarehousingListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/sofiaTheme"/>
+        <activity android:name=".ui.activity.AfterSaleDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.MarketProductDetialActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.AllotDetialActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.AllotItemDetialActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.RefundReshipActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.MarketingUtilActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/sofiaTheme"/>
+        <activity android:name=".ui.activity.ShopUtilActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/sofiaTheme"/>
+        <activity android:name=".ui.activity.SetActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.SearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|stateAlwaysVisible"/>
+        <activity android:name=".ui.activity.SearchCategoryActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.SearchResultActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"/>
+        <activity android:name=".ui.activity.BrandDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.MarginReportActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.StatActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.ShopStatActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.AllShopStatActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.ImagePreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <activity android:name=".ui.activity.SplashActivity"
+            android:theme="@style/splashTheme"
+            android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <activity android:name=".ui.activity.TestActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.activity.ShopKeeperActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/homeTheme"
+            android:screenOrientation="portrait"/>
+
+        <!-- 微信回调activity -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

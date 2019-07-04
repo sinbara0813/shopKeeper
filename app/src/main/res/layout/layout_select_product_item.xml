@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/check_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/icon_checkbox_nor"
+        android:layout_marginRight="8dp"/>
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="82.5dp"
+        android:layout_height="110dp"
+        android:src="@mipmap/ic_logo_empty5"
+        android:layout_toRightOf="@id/check_iv"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:id="@+id/describe_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="#111111"
+        android:textSize="14dp"
+        android:layout_toRightOf="@id/iv"
+        android:layout_alignTop="@id/iv"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/price_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:textColor="#8d92a3"
+        android:layout_alignLeft="@id/describe_tv"
+        android:layout_below="@id/describe_tv"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/store_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:textColor="#8d92a3"
+        android:layout_alignLeft="@id/price_tv"
+        android:layout_below="@id/price_tv"/>
+
+</RelativeLayout>

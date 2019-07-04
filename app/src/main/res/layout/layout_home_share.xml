@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/transparent"
+    android:clickable="true">
+
+    <ImageView
+        android:id="@+id/close_iv"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginRight="34dp"
+        android:src="@mipmap/icon_clo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="40dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="49dp"
+        app:layout_constraintTop_toBottomOf="@+id/close_iv"
+        android:background="#A5A5A5"/>
+    
+    <View
+        android:layout_width="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="341dp"
+        app:layout_constraintTop_toTopOf="@+id/bg1"
+        android:layout_marginTop="117dp"
+        android:background="@drawable/sp_home_share_bg"/>
+
+    <View
+        android:id="@+id/bg1"
+        android:layout_width="0dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_height="254dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/sp_round2_bg_white"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="72dp"
+        />
+
+    <TextView
+        android:id="@+id/tag_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bg1"
+        android:textColor="@color/flash_time_bg_color"
+        android:textSize="14dp"
+        android:layout_marginTop="35dp"
+        android:text="分享到"/>
+
+    <View
+        android:layout_width="110dp"
+        android:layout_height="1dp"
+        android:background="#80333333"
+        app:layout_constraintTop_toTopOf="@+id/tag_tv"
+        android:layout_marginRight="14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tag_tv"
+        app:layout_constraintRight_toLeftOf="@+id/tag_tv"/>
+
+    <View
+        android:layout_width="110dp"
+        android:layout_height="1dp"
+        android:background="#80333333"
+        app:layout_constraintTop_toTopOf="@+id/tag_tv"
+        app:layout_constraintBottom_toBottomOf="@+id/tag_tv"
+        app:layout_constraintLeft_toRightOf="@+id/tag_tv"
+        android:layout_marginLeft="14dp"/>
+
+    <TextView
+        android:id="@+id/wx_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/tag_tv"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="19dp"
+        android:text="微信"
+        android:textSize="12dp"
+        android:drawablePadding="11dp"
+        android:textColor="@color/color_black3"
+        app:layout_constraintRight_toLeftOf="@+id/friend_tv"
+        android:drawableTop="@mipmap/fenxiang_wx"/>
+
+    <TextView
+        android:id="@+id/friend_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/tag_tv"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="19dp"
+        android:text="朋友圈"
+        android:textSize="12dp"
+        android:drawablePadding="11dp"
+        app:layout_constraintLeft_toRightOf="@+id/wx_tv"
+        app:layout_constraintRight_toLeftOf="@+id/pic_tv"
+        android:textColor="@color/color_black3"
+        android:drawableTop="@mipmap/fenxiang_pyq"/>
+
+    <TextView
+        android:id="@+id/pic_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/tag_tv"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="19dp"
+        app:layout_constraintLeft_toRightOf="@+id/friend_tv"
+        app:layout_constraintRight_toLeftOf="@+id/copy_tv"
+        android:text="保存图片"
+        android:textSize="12dp"
+        android:drawablePadding="11dp"
+        android:textColor="@color/color_black3"
+        android:drawableTop="@mipmap/fenxiang_tp"/>
+
+    <TextView
+        android:id="@+id/copy_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/tag_tv"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="19dp"
+        app:layout_constraintLeft_toRightOf="@+id/pic_tv"
+        android:text="复制链接"
+        android:textSize="12dp"
+        android:drawablePadding="11dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="50dp"
+        android:textColor="@color/color_black3"
+        android:drawableTop="@mipmap/fenxiang_lj"/>
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="0dp"
+        android:layout_height="145dp"
+        app:layout_constraintLeft_toLeftOf="@+id/bg1"
+        app:layout_constraintTop_toTopOf="@+id/bg1"
+        app:layout_constraintRight_toRightOf="@+id/bg1"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"/>
+
+    <ImageView
+        android:id="@+id/scode_iv"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:layout_constraintTop_toBottomOf="@+id/image"
+        android:layout_marginTop="7dp"
+        app:layout_constraintRight_toRightOf="@+id/image"/>
+
+    <TextView
+        android:id="@+id/brand_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@+id/image"
+        android:textSize="17dp"
+        android:maxLength="12"
+        android:textColor="@color/flash_time_bg_color"
+        app:layout_constraintTop_toBottomOf="@+id/image"
+        android:layout_marginTop="24dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:textColor="@color/color_black4"
+        app:layout_constraintLeft_toLeftOf="@+id/brand_name_tv"
+        app:layout_constraintTop_toBottomOf="@+id/brand_name_tv"
+        android:text="长按识别二维码"
+        android:layout_marginTop="5dp"/>
+
+
+</android.support.constraint.ConstraintLayout>

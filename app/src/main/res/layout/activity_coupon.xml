@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tl="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v4.view.ViewPager
+        android:layout_marginTop="-16dp"
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f6f7fa"
+        android:layout_below="@+id/title_ll"/>
+
+    <LinearLayout
+        android:id="@+id/title_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:elevation="4dp">
+
+            <ImageView
+                android:id="@+id/back_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_nav_back_black"
+                android:layout_marginLeft="16dp"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="优惠券"
+                android:textSize="14dp"
+                android:layout_centerInParent="true"/>
+
+            <ImageView
+                android:id="@+id/add_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_add_black"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"/>
+
+        </RelativeLayout>
+
+        <com.flyco.tablayout.SlidingTabLayout
+            android:layout_marginBottom="16dp"
+            android:layout_below="@+id/tv_phone_number"
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:visibility="visible"
+            tl:tl_indicator_style="NORMAL"
+            tl:tl_indicator_color="#111111"
+            tl:tl_indicator_gravity="BOTTOM"
+            tl:tl_indicator_height="2dp"
+            tl:tl_indicator_width_equal_title="true"
+            tl:tl_tab_padding="12dp"
+            tl:tl_tab_space_equal="true"
+            tl:tl_textSelectColor="#111111"
+            tl:tl_textUnselectColor="@color/normal_black"
+            tl:tl_textBold="true"
+            tl:tl_textsize="14sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

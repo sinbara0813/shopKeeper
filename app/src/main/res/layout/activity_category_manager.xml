@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:paddingLeft="16dp"
+            android:layout_height="match_parent"
+            android:src="@mipmap/icon_nav_back_black"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:paddingRight="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="#8d92A3"
+            android:layout_centerInParent="true"
+            android:text="品类管理"/>
+
+        <ImageView
+            android:id="@+id/add_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_add_black"
+            android:layout_marginRight="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/edit_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/add_iv"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:text="管理"
+            android:textColor="@color/normal_black"
+            android:textSize="@dimen/medium_text_size3"/>
+
+    </RelativeLayout>
+
+    <com.d2cmall.shopkeeper.ui.view.OverScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/content_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"/>
+
+    </com.d2cmall.shopkeeper.ui.view.OverScrollView>
+
+</LinearLayout>

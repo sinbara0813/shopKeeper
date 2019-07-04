@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/layout_shadow_bottom16_title"/>
+
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_below="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <ImageView
+            android:src="@mipmap/pic_yhq"
+            android:id="@+id/iv_coupon"
+            android:layout_width="328dp"
+            android:layout_height="130dp"
+            />
+        <ImageView
+            android:src="@mipmap/pic_sppt"
+            android:id="@+id/iv_collage_coupon"
+            android:layout_width="328dp"
+            android:layout_height="130dp"
+            />
+        <ImageView
+            android:src="@mipmap/pic_yhqpt"
+            android:id="@+id/iv_collage_product"
+            android:layout_width="328dp"
+            android:layout_height="130dp"
+            />
+    </LinearLayout>
+</RelativeLayout>

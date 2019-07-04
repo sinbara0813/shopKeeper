@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+
+    <com.d2cmall.shopkeeper.ui.view.headerViewPager.HeaderViewPager
+        android:id="@+id/scrollableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:hvp_topOffset="1dp">
+        <RelativeLayout
+            android:layout_marginTop="56dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <View
+                android:background="@color/normal_blue"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                />
+            <RelativeLayout
+                android:id="@+id/rl_brand_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/iv_brand_head_pic"
+                    android:id="@+id/tv_brand_name"
+                    android:layout_width="match_parent"
+                    android:gravity="left"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_back"
+                    android:layout_marginTop="26dp"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:maxLength="12"
+                    android:textColor="@color/color_white"
+                    android:textSize="18sp"
+                    tools:text="雅莹服饰杭州大厦店州大厦店" />
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/iv_brand_head_pic"
+                    android:id="@+id/tv_brand_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_brand_name"
+                    android:layout_marginTop="8dp"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="店铺id"
+                    android:textColor="#B6C1DE"
+                    android:textSize="14sp" />
+
+
+                <com.d2cmall.shopkeeper.ui.view.RoundedImageView
+                    android:layout_marginLeft="15dp"
+                    android:id="@+id/iv_brand_head_pic"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_alignTop="@+id/tv_brand_name"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/icon_default_avatar"
+                    app:is_oval="true"
+                    app:round_color="@color/normal_black"
+                    app:round_width="0.5dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_margin"
+                android:layout_marginTop="32dp"
+                android:layout_below="@+id/rl_brand_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:id="@+id/tv_desc"
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="17dp"
+                    android:text="可调拨保证金(元)"
+                    android:textColor="#ffb6c1de"
+                    android:textSize="12sp"
+                    />
+                <TextView
+                    android:id="@+id/tv_amount"
+                    android:layout_below="@+id/tv_desc"
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="29dp"
+                    android:textColor="#ffffffff"
+                    android:textSize="25sp"
+                    />
+
+                <TextView
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/sp_line"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/tv_clear_margin"
+                    android:layout_width="90dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="结算保证金"
+                    android:textColor="#ffffffff"
+                    android:textSize="12sp"
+                    />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_pending"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_below="@+id/rl_margin"
+                android:background="@drawable/sp_round2_bg_white">
+
+                <RelativeLayout
+                    android:gravity="center_vertical"
+                    android:id="@+id/rl_pending_refund"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_marginTop="-23dp"
+                        android:layout_marginLeft="16dp"
+                        android:id="@+id/iv_pending_refund_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/pic_home_backlog" />
+
+                    <TextView
+                        android:id="@+id/tv_purchase_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:textColor="#111111"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        tools:text="12" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_purchase_num"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:text="采购待发货"
+                        android:textColor="@color/normal_black"
+                        android:textSize="11dp" />
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="40dp"
+                    android:background="#D1D9EE" />
+
+                <RelativeLayout
+                    android:gravity="center"
+                    android:id="@+id/pending_deliver"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+
+                    <TextView
+                        android:id="@+id/tv_allocation_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:paddingRight="8dp"
+                        android:textColor="#111111"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        tools:text="12" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_allocation_num"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:paddingRight="8dp"
+                        android:text="调拨待发货"
+                        android:textColor="@color/normal_black"
+                        android:textSize="11dp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="40dp"
+                    android:background="#D1D9EE" />
+
+                <RelativeLayout
+                    android:gravity="center"
+                    android:id="@+id/rl_pending_writeoff"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+
+                    <TextView
+                        android:id="@+id/tv_pending_return_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:paddingLeft="8dp"
+                        android:textColor="#111111"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        tools:text="12" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_pending_return_num"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:paddingLeft="8dp"
+                        android:text="待调拨退回"
+                        android:textColor="@color/normal_black"
+                        android:textSize="11dp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:orientation="horizontal"
+                android:layout_below="@+id/ll_pending"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                >
+                <TextView
+                    android:id="@+id/tv_stock_goods"
+                    android:gravity="center"
+                    android:drawableTop="@mipmap/icon_caigou"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="采购订单"
+                    android:textColor="#ff333333"
+                    android:textSize="12sp"
+                    />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    />
+                <TextView
+                    android:id="@+id/tv_after_sale"
+                    android:gravity="center"
+                    android:drawableTop="@mipmap/icon_shouhou"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="采购售后"
+                    android:textColor="#ff333333"
+                    android:textSize="12sp"
+                    />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    />
+                <TextView
+                    android:id="@+id/tv_allocation"
+                    android:gravity="center"
+                    android:drawableTop="@mipmap/icon_diaobo"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="调拨订单"
+                    android:textColor="#ff333333"
+                    android:textSize="12sp"
+                    />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    />
+                <TextView
+                    android:id="@+id/tv_return"
+                    android:gravity="center"
+                    android:drawableTop="@mipmap/icon_shouhou_diaobo"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="调拨退回"
+                    android:textColor="#ff333333"
+                    android:textSize="12sp"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            app:layout_behavior="@string/tab_behavior"
+            app:tl_indicator_color="@color/normal_blue"
+            app:tl_indicator_gravity="BOTTOM"
+            app:tl_indicator_height="2dp"
+            app:tl_indicator_style="NORMAL"
+            app:tl_indicator_width_equal_title="true"
+            app:tl_tab_padding="10dp"
+            app:tl_tab_space_equal="true"
+            app:tl_textBold="true"
+            app:tl_textSelectColor="@color/normal_blue"
+            app:tl_textUnselectColor="@color/normal_black"
+            app:tl_textsize="14sp" />
+
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.d2cmall.shopkeeper.ui.view.headerViewPager.HeaderViewPager>
+
+
+    <RelativeLayout
+        android:id="@+id/title_fl"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/normal_blue"
+        app:layout_behavior="@string/behavior_update_title">
+
+        <ImageView
+            android:id="@+id/back_iv1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:scaleType="center"
+            android:src="@mipmap/icon_nav_back_white" />
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="进货管理"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/medium_text_size1" />
+
+
+    </RelativeLayout>
+
+</FrameLayout>

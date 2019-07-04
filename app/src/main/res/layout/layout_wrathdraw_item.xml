@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/color_white"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            tools:text="+220.00元"
+            android:lines="1"
+            android:textColor="#111111"
+            android:textSize="18sp"
+            android:id="@+id/tv_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:gravity="right"
+            tools:text="申请中"
+            android:lines="1"
+            android:textColor="@color/normal_blue"
+            android:textSize="12sp"
+            android:id="@+id/tv_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="8dp"
+        tools:text="申请金额: 这是申请金额"
+        android:lines="1"
+        android:textColor="@color/normal_black"
+        android:textSize="12sp"
+        android:id="@+id/tv_apply_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <TextView
+        android:layout_marginTop="8dp"
+        tools:text="提现到: 银行卡"
+        android:lines="1"
+        android:textColor="@color/normal_black"
+        android:textSize="12sp"
+        android:id="@+id/tv_withdraw_channel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <TextView
+        android:layout_marginTop="8dp"
+        tools:text="提现时间: "
+        android:lines="1"
+        android:textColor="@color/normal_black"
+        android:textSize="12sp"
+        android:id="@+id/tv_withdraw_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:layout_marginTop="8dp"
+        tools:text="支付流水: 15465846"
+        android:lines="1"
+        android:textColor="@color/normal_black"
+        android:textSize="12sp"
+        android:id="@+id/tv_pay_serial_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <TextView
+        android:layout_marginTop="8dp"
+        tools:text="支付账号: 15465846"
+        android:lines="1"
+        android:textColor="@color/normal_black"
+        android:textSize="12sp"
+        android:id="@+id/tv_pay_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+</LinearLayout>

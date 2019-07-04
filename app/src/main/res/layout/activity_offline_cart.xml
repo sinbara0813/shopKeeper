@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/title_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="42dp"/>
+
+    <ImageView
+        android:id="@+id/back_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/title_guide"
+        android:src="@mipmap/icon_nav_back_black"
+        android:layout_marginLeft="14dp"/>
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#8D92A3"
+        android:textSize="15dp"
+        android:text="线下收银"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/title_guide"/>
+
+    <TextView
+        android:id="@+id/select_tag_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13dp"
+        android:textColor="@color/color_black3"
+        android:text="选择商品"
+        app:layout_constraintTop_toBottomOf="@+id/title_guide"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="10dp"/>
+
+    <com.flyco.tablayout.SlidingTabLayout
+        android:id="@id/tabLayout"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        android:visibility="visible"
+        app:layout_behavior="@string/tab_behavior"
+        app:tl_indicator_color="@color/normal_blue"
+        app:tl_indicator_gravity="BOTTOM"
+        app:tl_indicator_height="2dp"
+        app:tl_indicator_style="NORMAL"
+        app:tl_indicator_width_equal_title="true"
+        app:tl_underline_color="@color/line"
+        app:tl_underline_height="1dp"
+        app:tl_tab_padding="17dp"
+        app:tl_textSelectColor="@color/normal_blue"
+        app:tl_textUnselectColor="#8D92A3"
+        app:tl_textsize="12sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/select_tag_tv"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout"
+        app:layout_constraintBottom_toTopOf="@+id/line"/>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/line"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="71dp"/>
+
+
+    <ImageView
+        android:id="@+id/cart_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="14dp"
+        android:src="@mipmap/icon_cart_hui"
+        app:layout_constraintTop_toBottomOf="@+id/line"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/settle_tv"
+        android:layout_width="130dp"
+        android:layout_height="42dp"
+        android:background="@drawable/sp_round2_bg_cbcbcb"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="14dp"
+        app:layout_constraintTop_toBottomOf="@+id/line"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="13dp"
+        android:textColor="@color/color_white"
+        android:text="发起收款"
+        android:enabled="false"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/price_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/line"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/settle_tv"
+        android:layout_marginRight="10dp"
+        android:textSize="17dp"
+        android:text="未选择商品"
+        android:textColor="@color/flash_time_bg_color"/>
+
+</android.support.constraint.ConstraintLayout>

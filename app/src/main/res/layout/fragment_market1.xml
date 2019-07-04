@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <com.d2cmall.shopkeeper.ui.view.fitStatusbar.StatusView
+        android:background="@color/color_white"
+        android:id="@+id/status_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <include layout="@layout/layout_market_title"/>
+
+    <com.d2cmall.shopkeeper.ui.view.PtrStoreHouseFrameLayout
+        android:id="@+id/ptr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:ptr_duration_to_close="200"
+        app:ptr_duration_to_close_header="1000"
+        app:ptr_keep_header_when_refresh="true"
+        app:ptr_pull_to_fresh="false"
+        app:ptr_ratio_of_header_height_to_refresh="1.2"
+        app:ptr_resistance="1.7">
+
+    <com.d2cmall.shopkeeper.ui.view.headerViewPager.HeaderViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/head_view_pager">
+
+        <include layout="@layout/layout_market_banner"/>
+
+        <include layout="@layout/layout_market_content"/>
+
+    </com.d2cmall.shopkeeper.ui.view.headerViewPager.HeaderViewPager>
+    </com.d2cmall.shopkeeper.ui.view.PtrStoreHouseFrameLayout>
+</LinearLayout>

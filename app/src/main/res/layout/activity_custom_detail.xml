@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--    <FrameLayout
+            android:id="@+id/head_fl"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:layout_behavior="@string/head_behavior">-->
+    <RelativeLayout
+        android:id="@+id/head_fl"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center_vertical"
+        app:layout_behavior="@string/head_behavior">
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxLength="12"
+            android:text="文森 Gill"
+            android:textColor="#111111"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/iv_level"
+            android:layout_width="46dp"
+            android:layout_height="15dp"
+            android:layout_alignTop="@+id/tv_user_name"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/tv_user_name"
+            android:src="@mipmap/pic_label_pthy" />
+
+        <TextView
+            android:id="@+id/tv_phone_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_user_name"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:lines="1"
+            android:text="手机号: 15023456789"
+            android:textColor="@color/normal_black"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+    <!--    </FrameLayout>-->
+
+    <FrameLayout
+        android:id="@+id/title_fl"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/color_white">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:src="@mipmap/icon_nav_back_black" />
+
+    </FrameLayout>
+
+    <com.d2cmall.shopkeeper.ui.view.RoundedImageView
+        android:id="@+id/iv_user_head_pic"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignTop="@+id/tv_user_name"
+        android:layout_centerVertical="true"
+        android:layout_gravity="right"
+        android:layout_marginRight="20dp"
+        android:background="@color/transparent"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/icon_default_avatar"
+        app:is_oval="true"
+        app:layout_behavior="@string/pic_behavior"
+        app:round_color="@color/normal_black"
+        app:round_width="1dp" />
+
+    <com.flyco.tablayout.SlidingTabLayout
+        android:id="@id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:visibility="visible"
+        app:layout_behavior="@string/tab_behavior"
+        app:tl_indicator_color="#111111"
+        app:tl_indicator_gravity="BOTTOM"
+        app:tl_indicator_height="2dp"
+        app:tl_indicator_style="NORMAL"
+        app:tl_indicator_width_equal_title="true"
+        app:tl_tab_padding="10dp"
+        app:tl_tab_space_equal="true"
+        app:tl_textBold="true"
+        app:tl_textSelectColor="#111111"
+        app:tl_textUnselectColor="@color/normal_black"
+        app:tl_textsize="14sp" />
+
+    <com.d2cmall.shopkeeper.ui.view.ExpandViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/viewpager_behavior" />
+
+</android.support.design.widget.CoordinatorLayout>

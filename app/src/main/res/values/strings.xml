@@ -1,0 +1,94 @@
+<resources>
+
+    <string name="behavior_update_title">com.d2cmall.buyer.behavior.UpdateTitleBehavior</string>
+
+    <string name="select">%1$d/%2$d</string>
+    <string name="label_share_weibo">新浪微博</string>
+    <string name="label_share_wxzone">朋友圈</string>
+    <string name="label_share_wxfriend">微信好友</string>
+    <string name="app_name">趣电铺</string>
+    <string name="label_plus">+%s</string>
+    <string name="label_kongge">%1$s %2$s</string>
+    <string name="label_country_code">选择国家和地区</string>
+    <string name="label_get_code">获取验证码</string>
+    <string name="label_retry_code">获取验证码(%1$s)</string>
+    <string name="msg_phone_empty">请输入手机号</string>
+    <string name="lable_phone_number">手机号: %1$s</string>
+    <string name="msg_phone_error">输入的手机格式错误</string>
+    <string name="label_transaction_amount">%1$s元</string>
+    <string name="label_transaction_amount1">%1$s%2$s元</string>
+    <string name="label_order_code">订单编号: %1$s</string>
+    <string name="label_pay_code">支付单号: %1$s</string>
+    <string name="label_pay_date">支付时间: %1$s</string>
+    <string name="label_withdraw_apply_amount">申请金额: %1$s</string>
+    <string name="label_withdraw_channle">提现到: %1$s</string>
+    <string name="label_withdraw_date">提现时间: %1$s</string>
+    <string name="label_withdraw_serial_number">支付流水号: %1$s</string>
+    <string name="label_pay_account">支付账号: %1$s</string>
+    <string name="label_action_ok">确定</string>
+    <string name="label_action_cancel">取消</string>
+    <string name="label_discount_amount">优惠: ¥%1$s</string>
+    <string name="label_actual_amount">实付: ¥%1$s</string>
+    <string name="label_product_total">共%1$s件商品  实付¥%2$s</string>
+    <string name="label_order_total">共%1$s件商品  ¥%2$s</string>
+    <string name="label_order_date">下单时间: %1$s</string>
+    <string name="label_allot_date">调拨时间: %1$s</string>
+    <string name="label_purchase_date">采购时间: %1$s</string>
+    <string name="label_logistics_company">物流公司: %1$s</string>
+    <string name="label_logistics_code">物流单号: %1$s</string>
+    <string name="label_order_pay_type">支付方式: %1$s</string>
+    <string name="label_money">¥%1$s</string>
+    <string name="label_quantity">x%1$s</string>
+    <string name="label_collage_product_price">拼团价: ¥%1$s  原价: ¥%2$s</string>
+    <string name="label_collage_valid_time">领取有效期: %1$s — %2$s</string>
+    <string name="label_collage_valid_time3">有效期: %1$s — %2$s</string>
+    <string name="label_shop_valid_time">店铺有效期至:%1$s</string>
+    <string name="label_collage_sucess_time">成团时间: %1$s小时内</string>
+    <string name="label_add_staff_time">添加时间: %1$s</string>
+    <string name="msg_camera_framework_bug">抱歉，Android相机出现问题。可能需要重启设备。</string>
+    <string name="label_no_more">亲，到底了哦~</string>
+    <string name="label_consume_amount"> 消费 %1$s元</string>
+    <string name="action_cancel">取消</string>
+    <string name="action_ok">确定</string>
+    <string name="label_coupon_num">发行: %1$d张 已领: %2$d张 单人限领: %3$d张</string>
+    <string name="label_coupon_discount">满%1$s减%2$s</string>
+    <string name="msg_camera_permission_error">请打开拍照权限</string>
+    <string name="label_main_refresh_time">最后更新 今天:%1$s</string>
+    <string name="label_char_num">%1$s/%2$s</string>
+    <string name="label_reship_info">退货件数 %1$s件    退货金额 ¥%2$s</string>
+    <string name="label_refund_amount">退款金额 ¥%2$s</string>
+    <string name="label_reship_reason">退货原因 %1$s</string>
+    <string name="label_refund_reason">退款原因 %1$s</string>
+    <string name="label_confirm_receive_tip">若实收数量有差异，会提交给供货商确认\n确认通过后才能入库</string>
+    <string-array name="label_logistic_titles">
+        <item>顺丰速递</item>
+        <item>申通快递</item>
+        <item>圆通快递</item>
+        <item>中通快递</item>
+        <item>韵达快递</item>
+        <item>百世汇通</item>
+        <item>EMS</item>
+        <item>京东快递</item>
+        <item>德邦快递</item>
+        <item>快捷快递</item>
+        <item>其他</item>
+    </string-array>
+
+    <string-array name="label_coupon_product_scope">
+        <item>全部商品</item>
+        <item>指定商品可用</item>
+        <item>指定商品不可用</item>
+    </string-array>
+    <string-array name="label_coupon_time_type">
+        <item>固定日期范围</item>
+        <item>领券当日计算</item>
+    </string-array>
+    <string name="label_app_info">Copyright @2019,D2CMALL.AllRights Reserved</string>
+    <string name="tab_behavior">com.d2cmall.shopkeeper.behavior.TabBehavior</string>
+    <string name="head_behavior">com.d2cmall.shopkeeper.behavior.HeadBehavior</string>
+    <string name="viewpager_behavior">com.d2cmall.shopkeeper.behavior.ViewPagerBehavior</string>
+    <string name="pic_behavior">com.d2cmall.shopkeeper.behavior.PicBehavior</string>
+    <string name="label_create_brand_tag">你还没有店铺,\n立即创建一个店铺吧。</string>
+    <string name="label_brand_tag1">我有个体店铺</string>
+    <string name="label_brand_tag2">我有属于某个品牌店\n或代理商的店铺</string>
+</resources>

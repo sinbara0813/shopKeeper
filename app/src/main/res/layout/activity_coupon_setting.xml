@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_shadow_bottom16_title"/>
+    <LinearLayout
+        android:layout_marginTop="-16dp"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#22242a"
+            android:layout_weight="1"
+            android:text="优惠类型"
+            android:layout_marginLeft="20dp"
+            android:textSize="14dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="满额减"
+            android:textSize="14dp"
+            android:textColor="#c2c5cf"
+            android:layout_marginRight="20dp"
+            android:gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f1f3f8"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#22242a"
+            android:layout_weight="1"
+            android:text="优惠门槛"
+            android:layout_marginLeft="20dp"
+            android:textSize="14dp"/>
+
+        <EditText
+            android:id="@+id/et_threshold_amount"
+            android:inputType="numberDecimal"
+            android:lines="1"
+            android:background="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="请输入"
+            android:textSize="14dp"
+            android:textColor="#c2c5cf"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(元)"
+            android:textSize="14dp"
+            android:textColor="#c2c5cf"
+            android:layout_marginRight="20dp"
+            android:gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f1f3f8"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#22242a"
+            android:layout_weight="1"
+            android:text="优惠力度"
+            android:layout_marginLeft="20dp"
+            android:textSize="14dp"/>
+
+        <EditText
+            android:id="@+id/et_discount_amount"
+            android:inputType="numberDecimal"
+            android:lines="1"
+            android:background="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="请输入"
+            android:textSize="14dp"
+            android:textColor="#c2c5cf"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(元)"
+            android:textSize="14dp"
+            android:textColor="#c2c5cf"
+            android:layout_marginRight="20dp"
+            android:gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f1f3f8"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#22242a"
+            android:layout_weight="1"
+            android:text="总发行量"
+            android:layout_marginLeft="20dp"
+            android:textSize="14dp"/>
+
+        <EditText
+            android:id="@+id/et_total_num"
+            android:inputType="number"
+            android:lines="1"
+            android:background="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="请输入"
+            android:textSize="14dp"
+            android:textColor="#c2c5cf"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(张)"
+            android:textSize="14dp"
+            android:textColor="#c2c5cf"
+            android:layout_marginRight="20dp"
+            android:gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f1f3f8"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#22242a"
+            android:layout_weight="1"
+            android:text="每人限领"
+            android:layout_marginLeft="20dp"
+            android:textSize="14dp"/>
+
+        <EditText
+            android:id="@+id/et_limit_num"
+            android:inputType="number"
+            android:lines="1"
+            android:background="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="请输入"
+            android:textSize="14dp"
+            android:textColor="#c2c5cf"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(张)"
+            android:textSize="14dp"
+            android:textColor="#c2c5cf"
+            android:layout_marginRight="20dp"
+            android:gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f1f3f8"/>
+
+</LinearLayout>

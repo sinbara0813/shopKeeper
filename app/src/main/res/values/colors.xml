@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#8A000000</color>
+
+    <!--背景色-->
+    <color name="bg_white">#f0f0f0</color>
+    <color name="bg_color">#f6f6f6</color>
+
+    <!--内分割线-->
+    <color name="line">#f1f3f8</color>
+    <color name="line1">#e8e8e8</color>
+
+    <color name="color_white">#ffffff</color>
+    <color name="color_white2">#f5f0eb</color>
+    <color name="color_white5">#f6f6f6</color>
+    <color name="color_white1">#99ffffff</color>
+    <!--用于醒目信息-->
+    <color name="color_red">#E83333</color>
+
+    <color name="color_green">#22a775</color>
+    <color name="color_blue5">#007aff</color>
+    <color name="color_blue6">#4050d2</color>
+
+    <!--用于提示性文字-->
+    <color name="color_orange">#C39B5C</color>
+    <color name="color_orange1">#9c6c4b</color>
+
+    <!--全黑，一般不用-->
+    <color name="color_black">#000000</color>
+    <!--用于重要文字，按钮底色-->
+    <color name="color_black2">#222222</color>
+    <!--用于较为重要信息-->
+    <color name="color_black3">#666666</color>
+    <!--用于非重要信息-->
+    <color name="color_black4">#999999</color>
+    <!--类似分割线-->
+    <color name="color_black5">#c8c8c8</color>
+
+    <color name="color_black30">#4D000000</color>
+    <color name="color_black50">#80000000</color>
+    <color name="color_black85">#DA000000</color>
+    <color name="color_black_bg1">#262626</color>
+
+    <color name="color_black38">#61000000</color>
+    <color name="color_black60">#8A000000</color>
+    <color name="color_black87">#DE000000</color>
+
+    <!--90%白色-->
+
+    <!--60%白色-->
+    <color name="trans_60_color_white">#b2ffffff</color>
+    <!--70%白色-->
+    <!--50%白色-->
+    <!--40%白色-->
+    <!--25%白色-->
+    <color name="trans_25_color_white">#40ffffff</color>
+
+    <!--66%白色-->
+
+    <color name="transparent">#00000000</color>
+    <color name="transparent_white2">#80ffffff</color>
+
+    <!--80%#767676黑色-->
+
+    <!--80%黑色-->
+    <!--70%透明-->
+    <!--60%透明-->
+    <!--50%黑色-->
+    <color name="trans_50_color_black">#80000000</color>
+    <!--40%黑色-->
+    <color name="trans_40_color_black">#66000000</color>
+    <!--30%黑色-->
+    <color name="trans_30_color_black">#4c000000</color>
+    <!--87%黑色-->
+
+    <!--87%黑色-->
+
+    <!--87%-->
+
+    <color name="flash_time_bg_color">#333333</color>
+
+    <color name="enable_color">#ebecec</color>
+
+    <color name="gray_color">#dddddd</color>
+    <color name="sofia_navigation">#2B2B2B</color>
+    <color name="normal_black">#8d92a3</color>
+    <color name="black111111">#111111</color>
+    <color name="light_black">#c2c5cf</color>
+    <color name="normal_blue">#ff4050D2</color>
+    <color name="filter_select">#ffb6c1de</color>
+    <color name="filter_un_select">#fff8f8f8</color>
+    <color name="normal_orange">#9c6c4b</color>
+    <color name="allot_tag">#9C6C4B</color>
+    <color name="purchase_tag">#4351C1</color>
+</resources>

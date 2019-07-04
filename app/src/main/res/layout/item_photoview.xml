@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.d2cmall.shopkeeper.ui.view.photoview.PhotoView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop" />
+
+    <com.d2cmall.shopkeeper.ui.view.photoview.PhotoView
+        android:id="@+id/pv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ProgressBar
+        android:id="@+id/pb"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone" />
+     <TextView
+         android:layout_width="match_parent"
+         android:layout_height="40dp"
+         android:text="发表"
+         android:layout_gravity="top|right"
+         android:textSize="@dimen/medium_text_size3"
+         android:background="@color/trans_30_color_black"
+         android:textColor="@color/color_white"
+         android:gravity="center_vertical|right"
+         android:paddingRight="10dp"
+         android:visibility="gone"/>
+</FrameLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="144dp"
+    android:layout_marginBottom="10dp"
+    android:background="@color/color_white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:id="@+id/purchase_settle_first_line"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/line"
+        android:layout_marginTop="48dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <View
+        android:id="@+id/purchase_settle_second_line"
+        android:layout_width="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="1dp"
+        android:background="@color/line"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="96dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/purchase_settle_first_line"
+        android:text="商品总计"
+        android:textColor="@color/color_black"
+        android:textSize="13dp"
+        android:layout_marginLeft="14dp"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/total_price_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/purchase_settle_first_line"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="13dp"
+        android:textColor="@color/color_black"
+        android:layout_marginRight="14dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_black"
+        android:textSize="13dp"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintTop_toTopOf="@+id/purchase_settle_first_line"
+        app:layout_constraintBottom_toBottomOf="@+id/purchase_settle_second_line"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="运费"/>
+
+    <TextView
+        android:id="@+id/freight_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/purchase_settle_first_line"
+        app:layout_constraintBottom_toBottomOf="@+id/purchase_settle_second_line"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="14dp"
+        android:textColor="@color/color_black"
+        android:textSize="13dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/purchase_settle_second_line"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="13dp"
+        android:textColor="@color/color_black"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="实际支付"/>
+
+    <TextView
+        android:id="@+id/actual_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_red"
+        android:textSize="17dp"
+        app:layout_constraintTop_toTopOf="@+id/purchase_settle_second_line"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="14dp"/>
+
+</android.support.constraint.ConstraintLayout>

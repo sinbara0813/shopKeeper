@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/delete_tv"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="#f6f7fa"
+        android:gravity="center_vertical"
+        android:textSize="12dp"
+        android:text="商品规格"
+        android:paddingLeft="16dp"
+        android:paddingRight="8dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+
+        <TextView
+            android:id="@+id/standard_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:textColor="@color/normal_black"
+            android:layout_marginLeft="16dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:text="规格"/>
+
+        <com.d2cmall.shopkeeper.ui.view.ClearEditText
+            android:id="@+id/standard_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:textColorHint="@color/light_black"
+            android:textColor="@color/color_black85"
+            android:layout_centerVertical="true"
+            android:hint="如红色L码"
+            android:background="@null"
+            android:layout_toRightOf="@id/standard_tv"
+            android:layout_marginRight="16dp"/>
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f1f3f8"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+
+        <TextView
+            android:id="@+id/retail_price_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:textColor="@color/normal_black"
+            android:layout_marginLeft="16dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:text="售价"/>
+
+        <com.d2cmall.shopkeeper.ui.view.ClearEditText
+            android:id="@+id/retail_price_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:textColorHint="@color/light_black"
+            android:textColor="@color/color_black85"
+            android:layout_centerVertical="true"
+            android:hint="请输入"
+            android:inputType="numberDecimal"
+            android:cursorVisible="true"
+            android:gravity="center_vertical"
+            android:background="@null"
+            android:layout_toRightOf="@id/retail_price_tv"
+            android:layout_marginRight="8dp"/>
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f1f3f8"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="44dp">
+
+            <TextView
+                android:id="@+id/store_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:textColor="@color/normal_black"
+                android:layout_marginLeft="16dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:text="库存"/>
+
+            <com.d2cmall.shopkeeper.ui.view.ClearEditText
+                android:id="@+id/store_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textColorHint="@color/light_black"
+                android:textColor="@color/color_black85"
+                android:layout_centerVertical="true"
+                android:hint="请输入"
+                android:inputType="number"
+                android:cursorVisible="true"
+                android:gravity="center_vertical"
+                android:background="@null"
+                android:layout_toRightOf="@id/store_tv"
+                android:layout_marginRight="8dp"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+    <View
+        android:id="@+id/purchase_info_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f1f3f8"/>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_purchase_info"
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="44dp">
+
+            <TextView
+                android:id="@+id/supply_price_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:textColor="@color/normal_black"
+                android:layout_marginLeft="16dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                />
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#f1f3f8"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="44dp">
+
+            <TextView
+                android:id="@+id/profit_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:textColor="@color/normal_black"
+                android:layout_marginLeft="16dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:text="预警库存"/>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</merge>

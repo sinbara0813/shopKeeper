@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+
+        <ImageView
+            android:id="@+id/back_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_nav_back_black"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="创建店铺"
+            android:textColor="@color/normal_black"
+            android:textSize="16dp"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/label_create_brand_tag"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:text="选择店铺类型"
+        android:textColor="@color/color_black3"
+        android:textSize="14dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp">
+
+        <RelativeLayout
+            android:id="@+id/single_rl"
+            android:layout_width="0dp"
+            android:layout_height="85dp"
+            android:layout_weight="1"
+            android:background="#f0f0f0"
+            android:layout_marginRight="15dp">
+
+            <ImageView
+                android:id="@+id/single_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_cj_gou"
+                android:layout_alignParentRight="true"
+                android:visibility="gone"
+                android:layout_alignParentTop="true"/>
+
+            <TextView
+                android:id="@+id/single_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:layout_centerInParent="true"
+                android:text="@string/label_brand_tag1"
+                android:textColor="@color/flash_time_bg_color"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/coll_rl"
+            android:layout_width="0dp"
+            android:layout_height="85dp"
+            android:layout_weight="1"
+            android:background="#f0f0f0">
+
+            <ImageView
+                android:id="@+id/coll_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_cj_gou"
+                android:visibility="gone"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"/>
+
+            <TextView
+                android:id="@+id/coll_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:layout_centerInParent="true"
+                android:text="@string/label_brand_tag2"
+                android:textColor="@color/flash_time_bg_color"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/color_black3"
+        android:textSize="14dp"
+        android:text="填写店铺信息"/>
+
+    <com.d2cmall.shopkeeper.ui.view.ClearEditText
+        android:paddingLeft="15dp"
+        android:hint="店铺名称"
+        android:maxLength="20"
+        android:maxLines="1"
+        android:id="@+id/et_brand_name"
+        android:textSize="15dp"
+        android:textColor="@color/color_black3"
+        android:background="@drawable/sp_line"
+        android:textColorHint="#C2C5CF"
+        android:layout_height="48dp"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <com.d2cmall.shopkeeper.ui.view.ClearEditText
+        android:paddingLeft="15dp"
+        android:hint="主营业务"
+        android:maxLength="20"
+        android:maxLines="1"
+        android:id="@+id/et_brand_business"
+        android:textSize="15dp"
+        android:textColor="@color/color_black3"
+        android:background="@drawable/sp_line"
+        android:textColorHint="#C2C5CF"
+        android:layout_height="48dp"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        />
+
+    <TextView
+        android:paddingLeft="15dp"
+        android:hint="店铺所在地区"
+        android:maxLength="20"
+        android:maxLines="1"
+        android:id="@+id/tv_brand_address"
+        android:textSize="15dp"
+        android:textColor="@color/color_black3"
+        android:background="@drawable/sp_line"
+        android:textColorHint="#C2C5CF"
+        android:layout_height="48dp"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        />
+
+    <com.d2cmall.shopkeeper.ui.view.ClearEditText
+        android:paddingLeft="15dp"
+        android:hint="详细地址"
+        android:maxLength="20"
+        android:maxLines="1"
+        android:id="@+id/et_brand_address"
+        android:textSize="15dp"
+        android:textColor="@color/color_black3"
+        android:background="@drawable/sp_line"
+        android:textColorHint="#C2C5CF"
+        android:layout_height="48dp"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        />
+
+    <com.d2cmall.shopkeeper.ui.view.ClearEditText
+        android:paddingLeft="15dp"
+        android:hint="联系电话(用于业务处理，请务必填写正确)"
+        android:maxLength="20"
+        android:maxLines="1"
+        android:id="@+id/et_brand_phone"
+        android:textSize="15dp"
+        android:textColor="@color/color_black3"
+        android:background="@drawable/sp_line"
+        android:textColorHint="#C2C5CF"
+        android:layout_height="48dp"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        />
+
+    <TextView
+        android:id="@+id/sure_tv"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:textSize="16dp"
+        android:textColor="@color/color_white"
+        android:gravity="center"
+        android:background="@drawable/sp_round2_bg_blue"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:text="立即创建"/>
+</LinearLayout>
+
+    
+</ScrollView>

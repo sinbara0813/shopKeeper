@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:background="@color/color_white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="D2C店铺"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="10dp"/>
+
+    <View
+        android:id="@+id/product_line"
+        android:layout_width="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="1dp"
+        android:background="@color/line"
+        app:layout_constraintTop_toBottomOf="@+id/title_tv"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/content_ll"
+        android:layout_width="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/product_line"
+        android:orientation="vertical"/>
+
+    <EditText
+        android:id="@+id/remark_et"
+        android:layout_width="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="43dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="14dp"
+        android:hint="点击这里，可以填写备注或留言哦"
+        android:textSize="12dp"
+        android:textColor="@color/color_black85"
+        android:textColorHint="@color/color_black38"
+        android:background="@null"
+        app:layout_constraintTop_toBottomOf="@+id/content_ll"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"/>
+
+</android.support.constraint.ConstraintLayout>

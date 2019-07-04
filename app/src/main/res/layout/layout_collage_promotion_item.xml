@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@mipmap/pic_coupon"
+        android:layout_marginRight="8dp"/>
+
+    <TextView
+        android:id="@+id/name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/iv"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="#111111"
+        android:textSize="14dp"
+        tools:text="测试优惠券"
+        android:layout_marginBottom="8dp"/>
+
+    <LinearLayout
+        android:id="@+id/ll_collage_info"
+        android:gravity="center_vertical"
+        android:layout_alignLeft="@id/name_tv"
+        android:layout_below="@id/name_tv"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/tv_collage_num"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/normal_black"
+            android:textSize="12sp"
+            tools:text="3人团" />
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:id="@+id/describe_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/name_tv"
+            android:layout_below="@id/name_tv"
+            android:textSize="12sp"
+            tools:text="满999减100"
+            android:textColor="@color/normal_black"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_marginTop="8dp"
+        android:id="@+id/valid_time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:textColor="#8d92A3"
+        tools:text="有效期：2019/01/26-2019/01/28"
+        android:layout_marginBottom="8dp"
+        android:layout_alignLeft="@id/ll_collage_info"
+        android:layout_below="@id/ll_collage_info"/>
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:textColor="#8d92A3"
+        tools:text="发行：200张  已领：100张"
+        android:layout_marginBottom="16dp"
+        android:layout_alignLeft="@id/valid_time_tv"
+        android:layout_below="@id/valid_time_tv"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignLeft="@id/tv_price"
+        android:layout_below="@id/tv_price"
+        android:gravity="center_vertical|right">
+
+        <TextView
+            android:visibility="gone"
+            android:text="预览"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/normal_black"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:background="@drawable/sp_line"
+            android:id="@+id/tv_preview"
+            android:layout_width="72dp"
+            android:layout_height="28dp"
+            />
+
+        <TextView
+            android:text="编辑"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/normal_black"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:background="@drawable/sp_line"
+            android:id="@+id/tv_edit"
+            android:layout_width="72dp"
+            android:layout_height="28dp"
+            />
+        <TextView
+            android:text="使失效"
+            android:textColor="@color/normal_black"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:background="@drawable/sp_line"
+            android:id="@+id/tv_invalid"
+            android:layout_width="72dp"
+            android:layout_height="28dp"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

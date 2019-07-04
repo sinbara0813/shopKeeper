@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="14dp"
+    android:paddingTop="14dp"
+    android:background="@color/color_white">
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="82.5dp"
+        android:layout_height="110dp"
+        android:scaleType="centerCrop"
+        android:layout_marginRight="11dp"
+        android:layout_marginBottom="10dp"
+        android:src="@mipmap/ic_logo_empty5"/>
+
+    <TextView
+        android:id="@+id/info_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text="春夏新款时尚森系气质清新自然职业时尚首饰试试身手"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="14dp"
+        android:layout_toRightOf="@id/iv"/>
+
+    <TextView
+        android:id="@+id/price_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/iv"
+        android:text="售价：￥258   进价：￥160"
+        android:layout_below="@id/info_tv"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/store_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/iv"
+        android:layout_below="@id/price_tv"
+        android:layout_marginBottom="10dp"
+        android:text="库存：30件"/>
+
+    <TextView
+        android:id="@+id/review_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/iv"
+        android:layout_below="@id/store_tv"/>
+
+
+    <ImageView
+        android:id="@+id/more_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icon_about"
+        android:layout_alignParentRight="true"
+        android:scaleType="center"
+        android:layout_alignBottom="@+id/iv"
+        android:layout_marginRight="14dp"/>
+
+</RelativeLayout>
