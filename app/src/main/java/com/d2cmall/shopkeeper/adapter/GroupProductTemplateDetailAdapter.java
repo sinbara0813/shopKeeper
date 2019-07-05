@@ -2,13 +2,7 @@ package com.d2cmall.shopkeeper.adapter;
 
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
-import android.text.Spannable;
-import android.text.SpannableString;
-import android.text.Spanned;
-import android.text.style.AbsoluteSizeSpan;
-import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,11 +13,10 @@ import com.alibaba.android.vlayout.layout.LinearLayoutHelper;
 import com.d2cmall.shopkeeper.R;
 import com.d2cmall.shopkeeper.common.Constants;
 import com.d2cmall.shopkeeper.glide.ImageLoader;
-import com.d2cmall.shopkeeper.holder.ProductTopHolder;
 import com.d2cmall.shopkeeper.holder.ProductContentItemHolder;
+import com.d2cmall.shopkeeper.holder.ProductGroupTemplateTopHolder;
+import com.d2cmall.shopkeeper.holder.ProductTemplateTopHolder;
 import com.d2cmall.shopkeeper.model.ProductBean;
-import com.d2cmall.shopkeeper.model.ShopBean;
-import com.d2cmall.shopkeeper.ui.view.ScanCodePop;
 import com.d2cmall.shopkeeper.ui.view.nicevideo.TxVideoPlayerController;
 import com.d2cmall.shopkeeper.utils.ScreenUtil;
 import com.d2cmall.shopkeeper.utils.StringUtil;
@@ -38,15 +31,14 @@ import java.util.ArrayList;
  * 选货市场商品详情头部adapter
  */
 
-public class MarketProductDetailAdapter extends DelegateAdapter.Adapter<RecyclerView.ViewHolder> {
+public class GroupProductTemplateDetailAdapter extends DelegateAdapter.Adapter<RecyclerView.ViewHolder> {
 
     private Context mContext;
     private ArrayList<String> imgList;
     private ProductBean mProductBean;
-    private ShopBean mShopBean;
     private boolean hasVideo;
 
-    public MarketProductDetailAdapter(Context context,ProductBean bean) {
+    public GroupProductTemplateDetailAdapter(Context context, ProductBean bean) {
         this.mContext = context;
         this.mProductBean=bean;
         imgList=new ArrayList<>();
@@ -72,8 +64,8 @@ public class MarketProductDetailAdapter extends DelegateAdapter.Adapter<Recycler
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view ;
         if(viewType==1){
-            view = LayoutInflater.from(mContext).inflate(R.layout.layout_product_top, parent, false);
-            return new ProductTopHolder(view);
+            view = LayoutInflater.from(mContext).inflate(R.layout.layout_product_group_template_top, parent, false);
+            return new ProductGroupTemplateTopHolder(view);
         }else{
             view= LayoutInflater.from(mContext).inflate(R.layout.layout_product_content_item,parent,false);
             return new ProductContentItemHolder(view);
@@ -83,31 +75,16 @@ public class MarketProductDetailAdapter extends DelegateAdapter.Adapter<Recycler
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         if(position==0){
-            ProductTopHolder productTopHolder = (ProductTopHolder) holder;
+            ProductGroupTemplateTopHolder productTopHolder = (ProductGroupTemplateTopHolder) holder;
             if(mProductBean!=null){
                 productTopHolder.tvProductName.setText(mProductBean.getName());
-                if(mShopBean!=null){
-                    productTopHolder.tvBrandName.setText(mShopBean.getName());
-                    ImageLoader.displayImage((Activity) mContext,mShopBean.getLogo(), productTopHolder.ivBrandLogo);
-                    productTopHolder.bg.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            //点击微信有礼
-                            if(!StringUtil.isEmpty(mShopBean.getWechat())){
-                                showQrCode(mShopBean.getWechat());
-                            }else{
-                                Util.showToast(mContext,"商家尚未上传微信二维码!");
-                            }
-                        }
-                    });
-                }
                 if(!StringUtil.isEmpty(mProductBean.getDescription())){
                     productTopHolder.tvProductDesc.setVisibility(View.VISIBLE);
                     productTopHolder.tvProductDesc.setText(mProductBean.getDescription());
                 }else{
                     productTopHolder.tvProductDesc.setVisibility(View.GONE);
                 }
-                setPrice(productTopHolder);
+                setPrice(productTopHolder,mProductBean);
             }
         }else{
             ProductContentItemHolder imageListHolder = (ProductContentItemHolder) holder;
@@ -123,39 +100,19 @@ public class MarketProductDetailAdapter extends DelegateAdapter.Adapter<Recycler
         }
     }
 
-    private void showQrCode(String qrCode){
-        ScanCodePop codePop=new ScanCodePop(mContext,qrCode,true);
-        codePop.show(((Activity)mContext).getWindow().getDecorView());
-    }
-
-    private void setPrice(ProductTopHolder holder) {
-        //进价
-        String inPriceStr = "进价 ¥ " + Util.getNumberFormat(mProductBean.getSupplyPrice());
-        int length = inPriceStr.length();
-        SpannableString textSpan = new SpannableString(inPriceStr);
-        textSpan.setSpan(new AbsoluteSizeSpan(ScreenUtil.dip2px(12)), 0, 5, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
-        textSpan.setSpan(new AbsoluteSizeSpan(ScreenUtil.dip2px(16)), 5, length, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
-        ForegroundColorSpan colorSpan = new ForegroundColorSpan(Color.parseColor("#E93435"));
-        textSpan.setSpan(colorSpan, 5, length, Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
-        holder.tvInPrice.setText(textSpan);
-        //利润
-        String profitStr = "利润 ¥ " + Util.getNumberFormat(mProductBean.getProfit());
-        int profitLength = profitStr.length();
-        SpannableString profitTextSpan = new SpannableString(profitStr);
-        profitTextSpan.setSpan(new AbsoluteSizeSpan(ScreenUtil.dip2px(12)), 0, 5, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
-        profitTextSpan.setSpan(new AbsoluteSizeSpan(ScreenUtil.dip2px(16)), 5, profitLength, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
-        ForegroundColorSpan profitColorSpan = new ForegroundColorSpan(Color.parseColor("#9C6C4B"));
-        profitTextSpan.setSpan(profitColorSpan, 5, profitLength, Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
-        holder.tvProfit.setText(profitTextSpan);
-        //售价
-        String salePriceStr = "售价 ¥ " + Util.getNumberFormat(mProductBean.getPrice());
-        int salePriceLength = salePriceStr.length();
-        SpannableString salePriceTextSpan = new SpannableString(salePriceStr);
-        salePriceTextSpan.setSpan(new AbsoluteSizeSpan(ScreenUtil.dip2px(12)), 0, 5, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
-        salePriceTextSpan.setSpan(new AbsoluteSizeSpan(ScreenUtil.dip2px(16)), 5, salePriceLength, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
-        ForegroundColorSpan salePriceColorSpan = new ForegroundColorSpan(Color.parseColor("#333333"));
-        salePriceTextSpan.setSpan(salePriceColorSpan, 5, salePriceLength, Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
-        holder.tvSalePrice.setText(salePriceTextSpan);
+    private void setPrice(ProductGroupTemplateTopHolder holder,ProductBean bean) {
+        StringBuilder builder=new StringBuilder();
+        builder.append("拼团价 ").append("¥").append(Util.getNumberFormat(bean.getPrice()));
+        holder.groupPrice.setText(Util.buildSpan(new int[]{mContext.getResources().getColor(R.color.color_black3)},new int[]{3},new float[]{0.8f},new int[]{3},builder.toString()));
+        builder=new StringBuilder();
+        builder.append("原价 ").append("¥").append(Util.getNumberFormat(bean.getPrice()));
+        holder.originalPrice.setText(Util.buildSpan(new int[]{mContext.getResources().getColor(R.color.color_black3)},new int[]{2},new float[]{0.8f},new int[]{3},builder.toString()));
+        builder=new StringBuilder();
+        builder.append("成团人数 ").append(3).append("人成团");
+        holder.originalPrice.setText(Util.buildColorSpan(new int[]{mContext.getResources().getColor(R.color.color_black3)},new int[]{4},builder.toString()));
+        builder=new StringBuilder();
+        builder.append("成团有效期 ").append(24).append("小时");
+        holder.originalPrice.setText(Util.buildColorSpan(new int[]{mContext.getResources().getColor(R.color.color_black3)},new int[]{5},builder.toString()));
     }
 
     @Override
@@ -187,10 +144,5 @@ public class MarketProductDetailAdapter extends DelegateAdapter.Adapter<Recycler
         }else{
             return super.getItemViewType(position);
         }
-    }
-
-    public void setShopInfo(ShopBean shopBean) {
-        mShopBean = shopBean;
-        notifyDataSetChanged();
     }
 }

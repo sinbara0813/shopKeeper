@@ -24,7 +24,7 @@ import com.d2cmall.shopkeeper.base.mvp.BaseModel;
 import com.d2cmall.shopkeeper.base.mvp.BaseObserver;
 import com.d2cmall.shopkeeper.common.Action;
 import com.d2cmall.shopkeeper.common.Constants;
-import com.d2cmall.shopkeeper.holder.MarketProductTopInfoHolder;
+import com.d2cmall.shopkeeper.holder.ProductContentItemHolder;
 import com.d2cmall.shopkeeper.model.ProductBean;
 import com.d2cmall.shopkeeper.model.ShopBean;
 import com.d2cmall.shopkeeper.model.UserBean;
@@ -135,8 +135,6 @@ public class MarketProductDetialActivity extends BaseActivity {
         LinearLayoutHelper layoutHelper = new LinearLayoutHelper();
         layoutHelper.setMarginTop(ScreenUtil.dip2px(16));
         delegateAdapter = new DelegateAdapter(virtualLayoutManager);
-        marketProductDetailAdapter = new MarketProductDetailAdapter(this);
-        delegateAdapter.addAdapter(marketProductDetailAdapter);
         recycleView.setLayoutManager(virtualLayoutManager);
         recycleView.setAdapter(delegateAdapter);
         ptr.setPtrHandler(new PtrHandler() {
@@ -153,9 +151,9 @@ public class MarketProductDetialActivity extends BaseActivity {
         recycleView.setRecyclerListener(new RecyclerView.RecyclerListener() {
             @Override
             public void onViewRecycled(RecyclerView.ViewHolder holder) {
-                if (holder instanceof MarketProductTopInfoHolder) {
-                    MarketProductTopInfoHolder showItemHolder = (MarketProductTopInfoHolder) holder;
-                    NiceVideoPlayer niceVideoPlayer = showItemHolder.niceVideoPlayer;
+                if (holder instanceof ProductContentItemHolder) {
+                    ProductContentItemHolder showItemHolder = (ProductContentItemHolder) holder;
+                    NiceVideoPlayer niceVideoPlayer = showItemHolder.videoFl;
                     if (niceVideoPlayer.getVisibility() == View.VISIBLE && niceVideoPlayer == NiceVideoPlayerManager.instance().getCurrentNiceVideoPlayer()) {
                         NiceVideoPlayerManager.instance().releaseNiceVideoPlayer();
                     }
@@ -183,9 +181,8 @@ public class MarketProductDetialActivity extends BaseActivity {
                 if(mProductBean.getBuyout()==1){
                     btnBuyNow.setVisibility(View.VISIBLE);
                 }
-                marketProductDetailAdapter.setProductInfo(productBean.getData());
-                marketProductDetailAdapter.notifyDataSetChanged();
-
+                marketProductDetailAdapter = new MarketProductDetailAdapter(MarketProductDetialActivity.this,mProductBean);
+                delegateAdapter.addAdapter(marketProductDetailAdapter);
             }
 
             @Override
@@ -220,7 +217,7 @@ public class MarketProductDetialActivity extends BaseActivity {
                     }
                 }else {
                     mShopBean = shopBean.getData();
-                    if(shopId>0){
+                    if(shopId>0&&marketProductDetailAdapter!=null){
                         marketProductDetailAdapter.setShopInfo(mShopBean);
                     }
                 }
